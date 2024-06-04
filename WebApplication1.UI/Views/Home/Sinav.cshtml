@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="container">
+    <h1>Öğrenci Sınav Portalı</h1>
+
+    <h2>Sınav Seç</h2>
+
+    <form id="selectExamForm" class="mb-4">
+        <div class="mb-3">
+            <select id="examId" required class="form-control">
+                <!-- Sınav seçenekleri buraya eklenecek -->
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success my-3">Sınavı Başlat</button>
+    </form>
+
+    <div id="examSection" style="display: none;">
+        <h2>Sınav Soruları</h2>
+
+        <form id="examForm" class="mb-4">
+            <div class="mb-3">
+                <input type="number" id="studentId" placeholder="Öğrenci No" required class="form-control" />
+            </div>
+            <div id="questionsContainer" class="mb-3">
+                <!-- Sorular buraya eklenecek -->
+            </div>
+            <button type="submit" class="btn btn-success my-3">Sınavı Gönder</button>
+        </form>
+    </div>
+
+    <div id="resultSection" style="display: none;">
+        <h2>Sınav Sonuçları</h2>
+        <p id="resultMessage"></p>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/ajax/sinav.js"></script>
+}

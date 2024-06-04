@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_admin";
+}
+<div class="container">
+    <h1>Soru CRUD İşlemleri</h1>
+    <h2>Soru Ekle</h2>
+    <form id="addQuestionForm" class="mb-4">
+        <div class="mb-3">
+            <select id="examId" required class="form-control">
+                <!-- Sınav seçenekleri buraya eklenecek -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="text" id="questionText" placeholder="Soru Metni" required class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-success">Soru Ekle</button>
+    </form>
+
+    <h2>Soru Listesi</h2>
+    <table id="questionsTable" class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Sınav ID</th>
+                <th>Soru Metni</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Soru satırları buraya eklenecek -->
+        </tbody>
+    </table>
+
+    <h2>Soru Güncelle</h2>
+    <form id="updateQuestionForm" class="mb-4">
+        <input type="hidden" id="updateQuestionId" />
+        <div class="mb-3">
+            <select id="updateExamId" required class="form-control">
+                <!-- Sınav seçenekleri buraya eklenecek -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="text" id="updateQuestionText" placeholder="Soru Metni" required class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-success">Soruyu Güncelle</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/ajax/questions.js"></script>
+}

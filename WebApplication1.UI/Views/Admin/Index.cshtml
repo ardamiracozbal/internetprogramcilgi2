@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+<div class="container mt-5">
+    <h1>Select Exam and Student</h1>
+    <form id="selectionForm">
+        <div class="form-group">
+            <label for="examId">Select Exam:</label>
+            <select id="examId" class="form-control">
+                <option value="">Select Exam</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="studentId">Select Student:</label>
+            <select id="studentId" class="form-control">
+                <option value="">Select Student</option>
+            </select>
+        </div>
+    </form>
+
+    <div id="examSection" class="mt-4" style="display: none;">
+        <h2>Exam Questions</h2>
+        <div id="questionsContainer"></div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/ajax/home.js"></script>
+}
+
